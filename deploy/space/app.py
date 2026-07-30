@@ -86,20 +86,20 @@ def number_fidelity(source_note: str, prediction: str) -> float:
 st.markdown("""
 <style>
 .stApp { background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 340px); }
-.block-container { padding-top: 1.2rem; max-width: 1200px; }
+.block-container { padding-top: 3.5rem; max-width: 1200px; }
 #MainMenu, footer { visibility: hidden; }
 .med-hero {
     background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 60%, #38bdf8 100%);
     border-radius: 18px; padding: 2.2rem 2.4rem 2rem; color: #fff;
-    margin-bottom: 1.6rem; box-shadow: 0 8px 24px rgba(2,132,199,.25);
+    margin-top: .8rem; margin-bottom: 1.6rem; box-shadow: 0 8px 24px rgba(2,132,199,.25);
 }
 .med-hero h1 { color:#fff; font-size:2rem; font-weight:700; margin:0 0 .35rem; padding:0; letter-spacing:-.02em; }
 .med-hero p { color:#e0f2fe; font-size:1.02rem; margin:0; }
-.med-badges { margin-top:1rem; }
+.med-badges { margin-top:1.2rem; display:flex; flex-wrap:wrap; gap:.7rem; }
 .med-badge {
     display:inline-block; background:rgba(255,255,255,.16);
     border:1px solid rgba(255,255,255,.35); border-radius:999px;
-    padding:.25rem .8rem; font-size:.78rem; font-weight:600; color:#fff; margin-right:.5rem;
+    padding:.35rem 1rem; font-size:.78rem; font-weight:600; color:#fff;
 }
 .med-card {
     background:#fff; border:1px solid #bae6fd; border-radius:14px;

@@ -12,3 +12,6 @@ models/
 
 # scratch
 {data,src,app,deploy,docs,results}/
+
+# Claude Code local permissions (may contain command history with secrets)
+.claude/settings.local.json
