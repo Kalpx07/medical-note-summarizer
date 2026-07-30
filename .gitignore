@@ -1,0 +1,14 @@
+# secrets
+.env
+
+# environments & caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# model weights (GBs — published at hf.co/imkalpx/llama2-med-summarizer-gguf)
+models/
+
+# scratch
+{data,src,app,deploy,docs,results}/
