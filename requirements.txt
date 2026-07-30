@@ -1,3 +1,6 @@
+# prebuilt CPU wheels for llama-cpp-python (avoids 30-min source build; wheels exist for py<=3.13)
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+
 python-dotenv>=1.0.0
 rouge-score>=0.1.2
 nltk>=3.8.1
