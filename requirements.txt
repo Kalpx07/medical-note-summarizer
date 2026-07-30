@@ -1,6 +1,8 @@
-replicate>=0.25.0
 python-dotenv>=1.0.0
 rouge-score>=0.1.2
 nltk>=3.8.1
 streamlit>=1.32.0
-huggingface_hub>=0.21.0
+huggingface_hub>=0.21.0,<1.0
+llama-cpp-python>=0.3.0
+# local-only extras (Apple Silicon): pip install mlx-lm "transformers<5" torch
+# cloud Replicate backend: pip install replicate

@@ -49,7 +49,13 @@
       "Bash(rmdir '{data,src,app,deploy,docs,results}')",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git -c 'user.name=Kalpesh Borse' -c user.email=ritujasatkar7@gmail.com commit -m 'Medical note summarizer: local MLX LoRA fine-tune of Llama 2 7B *)"
+      "Bash(git -c 'user.name=Kalpesh Borse' -c user.email=ritujasatkar7@gmail.com commit -m 'Medical note summarizer: local MLX LoRA fine-tune of Llama 2 7B *)",
+      "Bash(curl -s \"https://huggingface.co/api/models/Qwen/Qwen2.5-0.5B\")",
+      "Bash(python3 -c \"import json,sys; m=json.load\\(sys.stdin\\); print\\('gated:', m.get\\('gated'\\)\\)\")",
+      "Bash(.venv/bin/python -m mlx_lm convert --hf-path Qwen/Qwen2.5-0.5B --mlx-path models/qwen05-4bit -q)",
+      "Bash(.venv/bin/python -m mlx_lm lora --model models/qwen05-4bit --train --data data/mlx --adapter-path models/qwen05-adapters --iters 400 --batch-size 4 --learning-rate 1e-4 --num-layers 16 --mask-prompt --steps-per-report 50 --steps-per-eval 200 --save-every 200 --grad-checkpoint)",
+      "Bash(cd \"/Users/kalpeshborse/Downloads/medical-note-summarizer 2\" && sed -e 's|imkalpx/llama2-med-summarizer-gguf|imkalpx/qwen05-med-summarizer-gguf|' -e 's|med-summarizer-Q4_K_M.gguf|qwen05-med-summarizer-Q4_K_M.gguf|' deploy/space/app.py > /tmp/won't-use && echo skip)",
+      "Bash(git -c 'user.name=Kalpesh Borse' -c user.email=ritujasatkar7@gmail.com commit -m 'Add free-tier cloud demo: Qwen2.5-0.5B sibling model + Streamlit Cloud app *)"
     ]
   }
 }
